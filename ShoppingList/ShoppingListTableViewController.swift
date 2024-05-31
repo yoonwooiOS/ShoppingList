@@ -48,9 +48,9 @@ class ShoppingListTableViewController: UITableViewController {
         addListTexfield.placeholder = "무엇을 구매하실 건가요?"
         addListTexfield.backgroundColor = cellsColor
         addListTexfield.borderStyle = .none
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: addListTexfield.frame.height))
-        addListTexfield.leftView = paddingView
-        addListTexfield.leftViewMode = .always
+//        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: addListTexfield.frame.height))
+//        addListTexfield.leftView = paddingView
+//        addListTexfield.leftViewMode = .always
 
         
         

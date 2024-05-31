@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99043DEB2C09F1D00075F5B6 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DEA2C09F1D00075F5B6 /* ShopListViewController.swift */; };
+		99043DEE2C09F1E90075F5B6 /* ShopListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99043DED2C09F1E90075F5B6 /* ShopListTableViewCell.xib */; };
+		99043DEF2C09F1E90075F5B6 /* ShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DEC2C09F1E90075F5B6 /* ShopListTableViewCell.swift */; };
+		99043DF32C09FD2C0075F5B6 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DF22C09FD2C0075F5B6 /* Shopping.swift */; };
+		99043DF52C09FF180075F5B6 /* LabelExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DF42C09FF180075F5B6 /* LabelExtention.swift */; };
+		99043DF72C0A07DD0075F5B6 /* ButtonUIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DF62C0A07DD0075F5B6 /* ButtonUIExtension.swift */; };
+		99043DF92C0A0B990075F5B6 /* AddLeftPaddingExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99043DF82C0A0B990075F5B6 /* AddLeftPaddingExtentsion.swift */; };
 		9991ADB32C007EEB00FF9D30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9991ADB22C007EEB00FF9D30 /* AppDelegate.swift */; };
 		9991ADB52C007EEB00FF9D30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9991ADB42C007EEB00FF9D30 /* SceneDelegate.swift */; };
 		9991ADB72C007EEB00FF9D30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9991ADB62C007EEB00FF9D30 /* ViewController.swift */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99043DEA2C09F1D00075F5B6 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
+		99043DEC2C09F1E90075F5B6 /* ShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableViewCell.swift; sourceTree = "<group>"; };
+		99043DED2C09F1E90075F5B6 /* ShopListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopListTableViewCell.xib; sourceTree = "<group>"; };
+		99043DF22C09FD2C0075F5B6 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
+		99043DF42C09FF180075F5B6 /* LabelExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtention.swift; sourceTree = "<group>"; };
+		99043DF62C0A07DD0075F5B6 /* ButtonUIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUIExtension.swift; sourceTree = "<group>"; };
+		99043DF82C0A0B990075F5B6 /* AddLeftPaddingExtentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLeftPaddingExtentsion.swift; sourceTree = "<group>"; };
 		9991ADAF2C007EEB00FF9D30 /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9991ADB22C007EEB00FF9D30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9991ADB42C007EEB00FF9D30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99043DE92C09F1A90075F5B6 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				99043DEA2C09F1D00075F5B6 /* ShopListViewController.swift */,
+				99043DEC2C09F1E90075F5B6 /* ShopListTableViewCell.swift */,
+				99043DED2C09F1E90075F5B6 /* ShopListTableViewCell.xib */,
+				99043DF22C09FD2C0075F5B6 /* Shopping.swift */,
+				99043DF42C09FF180075F5B6 /* LabelExtention.swift */,
+				99043DF62C0A07DD0075F5B6 /* ButtonUIExtension.swift */,
+				99043DF82C0A0B990075F5B6 /* AddLeftPaddingExtentsion.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		9991ADA62C007EEB00FF9D30 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +88,7 @@
 		9991ADB12C007EEB00FF9D30 /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
+				99043DE92C09F1A90075F5B6 /* UIViewController */,
 				9991ADB22C007EEB00FF9D30 /* AppDelegate.swift */,
 				9991ADB42C007EEB00FF9D30 /* SceneDelegate.swift */,
 				9991ADB62C007EEB00FF9D30 /* ViewController.swift */,
@@ -134,6 +163,7 @@
 				9991ADBC2C007EEC00FF9D30 /* Assets.xcassets in Resources */,
 				9991ADBF2C007EEC00FF9D30 /* Base in Resources */,
 				9991ADBA2C007EEB00FF9D30 /* Base in Resources */,
+				99043DEE2C09F1E90075F5B6 /* ShopListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +175,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9991ADC92C008DEA00FF9D30 /* ShoppingListTableViewController.swift in Sources */,
+				99043DF92C0A0B990075F5B6 /* AddLeftPaddingExtentsion.swift in Sources */,
+				99043DF32C09FD2C0075F5B6 /* Shopping.swift in Sources */,
 				9991ADB72C007EEB00FF9D30 /* ViewController.swift in Sources */,
+				99043DEB2C09F1D00075F5B6 /* ShopListViewController.swift in Sources */,
+				99043DF72C0A07DD0075F5B6 /* ButtonUIExtension.swift in Sources */,
+				99043DEF2C09F1E90075F5B6 /* ShopListTableViewCell.swift in Sources */,
 				9991ADC72C008DCD00FF9D30 /* ShoppingListTableViewCell.swift in Sources */,
 				9991ADB32C007EEB00FF9D30 /* AppDelegate.swift in Sources */,
 				9991ADB52C007EEB00FF9D30 /* SceneDelegate.swift in Sources */,
+				99043DF52C09FF180075F5B6 /* LabelExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

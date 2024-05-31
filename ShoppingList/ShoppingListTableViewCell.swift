@@ -18,4 +18,12 @@ class ShoppingListTableViewCell: UITableViewCell {
     
     @IBOutlet var shoppinglistLabel: UILabel!
     
+    
+    
+    override class func awakeFromNib() {
+        
+        
+    }
+    
+    
 }
