@@ -29,6 +29,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="starButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DOc-9R-3FQ"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeK-US-4Sq">
                         <rect key="frame" x="80" y="8" width="240" height="76"/>
@@ -43,6 +46,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="checkmarkButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Uql-My-5R4"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

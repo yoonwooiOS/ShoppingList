@@ -8,7 +8,7 @@
 import UIKit
 
 
-struct Shopping {
+struct ShoppingItem {
     
     var shoppingList:String
     var checkmark:Bool
@@ -27,12 +27,13 @@ class ShoppingListTableViewController: UITableViewController {
     @IBOutlet var addListButton: UIButton!
     
     var shoppingList = [
-        Shopping(shoppingList: "그립톡 구매하기", checkmark: true, bookmark: false),
-        Shopping(shoppingList: "사이다 구매하기", checkmark: true, bookmark: false),
-        Shopping(shoppingList: "아이패드 케이스 최저가 알아보기", checkmark: true, bookmark: false),
-        Shopping(shoppingList: "양말", checkmark: true, bookmark: false),
+        ShoppingItem(shoppingList: "그립톡 구매하기", checkmark: true, bookmark: false),
+        ShoppingItem(shoppingList: "사이다 구매하기", checkmark: true, bookmark: false),
+        ShoppingItem(shoppingList: "아이패드 케이스 최저가 알아보기", checkmark: true, bookmark: false),
+        ShoppingItem(shoppingList: "양말", checkmark: true, bookmark: false),
         
     ]
+    
     
     var cellsColor = UIColor.systemGray6
     override func viewDidLoad() {
@@ -105,7 +106,7 @@ class ShoppingListTableViewController: UITableViewController {
         }
         
         // 새로운 항목 추가
-        let newItem = Shopping(shoppingList: text, checkmark: false, bookmark: false)
+        let newItem = ShoppingItem(shoppingList: text, checkmark: false, bookmark: false)
         shoppingList.append(newItem)
         tableView.reloadData()
         addListTexfield.text = ""

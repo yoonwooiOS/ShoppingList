@@ -19,6 +19,8 @@ class ShopListTableViewCell: UITableViewCell {
     
     @IBOutlet var bgView: UIView!
     
+    var item: Item?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -31,12 +33,43 @@ class ShopListTableViewCell: UITableViewCell {
 
     func configureCell(data:Item) {
         
+        self.item = data
         addShoppingLabel.textLabel(data.name, textSize: 12, backgroundColor: .systemGray6)
         let checkmark = data.checkmark ? "checkmark.square" : "checkmark.square.fill"
         let star = data.bookmark ? "star" : "star.fill"
         checkMarkButton.buttonUiDesing(imageName: checkmark, tintColor: .black)
-        print(checkmark)
+
+        addStarButton.buttonUiDesing(imageName: star, tintColor: .black)
+        
+        checkButtonToggle(data: data)
+    }
+    
+    
+    @IBAction func checkmarkButtonClicked(_ sender: UIButton) {
+        print(#function)
+        item?.checkmark.toggle()
+        checkButtonToggle(data: item!)
+        
+    }
+    
+    
+    @IBAction func starButtonClicked(_ sender: UIButton) {
+        item?.bookmark.toggle()
+        starButtonToggle(data: item!)
+        
+    }
+    
+    func checkButtonToggle(data:Item) {
+        let checkmark = data.checkmark ? "checkmark.square" : "checkmark.square.fill"
+         checkMarkButton.buttonUiDesing(imageName: checkmark, tintColor: .black)
+        
+    }
+    func starButtonToggle(data:Item) {
+        
+        let star = data.bookmark ? "star" :
+"star.fill"
         addStarButton.buttonUiDesing(imageName: star, tintColor: .black)
     }
+    
     
 }

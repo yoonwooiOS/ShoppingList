@@ -175,6 +175,9 @@
                                         <rect key="frame" x="8" y="16.000000000000004" width="361" height="61.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addShoppingListTextField:" destination="mr6-pA-Y76" eventType="editingDidEndOnExit" id="eYf-La-k4f"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3H-mZ-Lr9">
                                         <rect key="frame" x="281" y="24.000000000000004" width="80" height="45.333333333333343"/>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ShopListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ShopListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate {
    
     @IBOutlet var addShoppingListTextField: UITextField!
     
@@ -16,7 +16,14 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var tableView: UITableView!
     
-    var shoppingList:[Item] = shopping.shoppingList
+    var shoppingList: [Item] = ShoppingITems().shoppingList {
+        didSet {
+            
+            tableView.reloadData()
+            
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +45,7 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+        addShoppingListTextField.delegate = self
     }
     
     func configureLayout() {
@@ -70,15 +77,32 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @IBAction func addShoppingListButtonClicked(_ sender: UIButton) {
-    var addShoppingList:[Shopping] = []
         
-        let newItem:Shopping = Shopping(shoppingList: addShoppingListTextField.text ?? "", checkmark: false, bookmark: false)
+        addNewItem()
+    
+    }
+    
+    @IBAction func addShoppingListTextField(_ sender: UITextField) {
         
-        addShoppingList.append(newItem)
-        print(addShoppingList)
-        tableView.reloadData()
+        view.endEditing(true)
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        addNewItem()
+        
+        return true
+    }
     
+    
+    func addNewItem() {
+        guard let item = addShoppingListTextField.text, !item.isEmpty else { return }
+      
+        let newItem = Item(name: item, checkmark: false, bookmark: false)
+        
+        shoppingList.append(newItem)
+        
+    }
+        
+       
 }

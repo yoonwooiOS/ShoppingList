@@ -14,9 +14,9 @@ struct Item {
     var bookmark:Bool
 }
 
-struct shopping {
+struct ShoppingITems {
     
-    static let shoppingList:[Item] = [
+     let shoppingList:[Item] = [
     
         Item(name: "그립톡 구매하기", checkmark: false, bookmark: false),
         Item(name: "사이다 구매하기", checkmark: false, bookmark: false),
