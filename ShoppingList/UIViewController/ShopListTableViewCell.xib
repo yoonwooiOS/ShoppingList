@@ -29,9 +29,6 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain"/>
-                        <connections>
-                            <action selector="starButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DOc-9R-3FQ"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeK-US-4Sq">
                         <rect key="frame" x="80" y="8" width="240" height="76"/>
@@ -46,9 +43,6 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain"/>
-                        <connections>
-                            <action selector="checkmarkButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Uql-My-5R4"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -71,9 +65,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addShoppingLabel" destination="GeK-US-4Sq" id="Veb-Z2-BFA"/>
-                <outlet property="addStarButton" destination="fCO-uV-dmj" id="1da-4z-P0J"/>
                 <outlet property="bgView" destination="Jyn-A9-6Or" id="E3j-yD-dIt"/>
-                <outlet property="checkMarkButton" destination="ONQ-Gi-cmD" id="A34-Ky-DnO"/>
+                <outlet property="checkMarkButton" destination="ONQ-Gi-cmD" id="Oll-gd-2rR"/>
+                <outlet property="starButton" destination="fCO-uV-dmj" id="d91-Be-Vpc"/>
             </connections>
             <point key="canvasLocation" x="170.99236641221373" y="37.323943661971832"/>
         </tableViewCell>

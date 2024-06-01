@@ -16,7 +16,9 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var tableView: UITableView!
     
-    var shoppingList: [Item] = ShoppingITems().shoppingList {
+    var shoppingList: [Item] = ShoppingITems().shoppingList
+    
+    var finalShoppingList:[Item] = [] {
         didSet {
             
             tableView.reloadData()
@@ -24,16 +26,13 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        finalShoppingList = shoppingList
         configureTabeVeiw()
         configureLayout()
-        
     }
-    
-  
     
     func configureTabeVeiw() {
         
@@ -49,11 +48,8 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func configureLayout() {
-       
-        addShoppingListButton.setTitle("추가", for: .normal)
-        addShoppingListButton.tintColor = .black
-        addShoppingListButton.backgroundColor = .systemGray5
-        addShoppingListButton.layer.cornerRadius = 10
+        
+        addShoppingListButton.buttonUiDesing(imageName: "", imageTitle: "추가", tintColor: .black, conerRadius: 10, backgroundColor: .systemGray5)
         
         addShoppingListTextField.placeholder = "무엇을 구해마실 건가요?"
         addShoppingListTextField.backgroundColor = .systemGray6
@@ -61,25 +57,32 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
         addShoppingListTextField.layer.cornerRadius = 10
         addShoppingListTextField.borderStyle = .none
         
-        
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shoppingList.count
+        
+        return finalShoppingList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopListTableViewCell") as! ShopListTableViewCell
-
-        let data = shoppingList[indexPath.row]
+        
+        let data = finalShoppingList[indexPath.row]
         cell.configureCell(data: data)
+        
+        cell.checkMarkButton.tag = indexPath.row
+        cell.checkMarkButton.addTarget(self, action: #selector(checkmarkButtonClicked), for: .touchUpInside)
+        cell.starButton.tag = indexPath.row
+        cell.starButton.addTarget(self, action: #selector(starButtonClicked), for: .touchUpInside)
+        
         return cell
     }
     
     @IBAction func addShoppingListButtonClicked(_ sender: UIButton) {
         
         addNewItem()
-    
+        addShoppingListTextField.text = ""
     }
     
     @IBAction func addShoppingListTextField(_ sender: UITextField) {
@@ -89,8 +92,9 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        addNewItem()
         
+        addNewItem()
+        addShoppingListTextField.text = ""
         return true
     }
     
@@ -100,9 +104,22 @@ class ShopListViewController: UIViewController, UITableViewDataSource, UITableVi
       
         let newItem = Item(name: item, checkmark: false, bookmark: false)
         
-        shoppingList.append(newItem)
+        finalShoppingList.append(newItem)
         
     }
+    
+    @objc func checkmarkButtonClicked(_ sender:UIButton) {
         
-       
+        let index = sender.tag
+        
+        finalShoppingList[index].checkmark.toggle()
+        
+    }
+    
+    @objc func starButtonClicked(_ sender:UIButton) {
+        
+        let index = sender.tag
+        
+        finalShoppingList[index].bookmark.toggle()
+    }
 }
